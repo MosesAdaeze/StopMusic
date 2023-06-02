@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music website - easy tutorials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="./pic/logo.png" alt="" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <br></br>
+                <li><a href="#">About</a></li>
+                <br></br>
+                <li><a href="#">Specification</a></li>
+                <br></br>
+                <li><a href="#">Product</a></li>
+                <br></br>
+                <li><a href="#">Menu</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-color">
+                <h1>THE <br> REAL <br> SOUND</h1>
+            </div>
+            <div class="rigth-color">
+                <p>Click Here TO Listen</p>
+                <img src="./pic/play.png" alt="" id="icon">
+            </div>
+        </div>
+    </div>
+    <audio id="mysong">
+        <source src="./pic/Syn Cole - Time [NCS Release].mp3" type="audio/mp3">
+    </audio>
+    <script>
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+        icon.onclick = function(){
+            if(mysong.paused){
+                mysong.play();
+                icon.src = "./pic/pause.png"
+            }else{
+                mysong.pause();
+                icon.src = "./pic/play.png"
+            }
+        }
+    </script>
+</body>
+</html>
